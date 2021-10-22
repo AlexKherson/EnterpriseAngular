@@ -1,0 +1,24 @@
+<p>role-link works!</p>
+
+
+<nav >
+    <div *ngFor="let role of roles | keyvalue ">
+        <div>
+            <a 
+                *ngIf="role.key ===roleTypes.Admin.toString()"
+                routerLink="admin"                 
+            >
+                Admin
+            </a>
+        </div>   
+        <div>
+            <a                
+                *ngIf="role.key===roleTypes.ProductManager.toString()"
+                routerLink="products"                
+            >
+                Products
+            </a>
+        </div>
+        
+    </div>
+</nav>
